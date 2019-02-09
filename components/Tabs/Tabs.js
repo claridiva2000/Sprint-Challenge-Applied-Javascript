@@ -4,27 +4,33 @@
  class TabLink {
     constructor(tabElement){
      // assign this.tabElement to the tabElement DOM reference
-    //  this.tabElement= tabElement; 
-    console.log(this.tabElement);
+     this.tabElement= tabElement; 
+    // console.log(this.tabElement);
     
-//     // Get the `data-tab` value from this.tabElement and store it here
-//     this.tabData = this.tabElement.dataset.tab; 
-    
+    // Get the `data-tab` value from this.tabElement and store it here
+    this.tabData = this.tabElement.dataset.tab; 
+       console.log(this.tabData);
 //     // We need to find out if a user clicked 'all' cards or a specific category.  Follow the instructions below to accomplish this task:    
 
     };
      
 //   //   // Check to see if this.tabData is equal to 'all'
-//   //   if(this.tabData === 'all'){
-//   //     // If `all` is true, select all cards regardless of their data attribute values
+checkIfTrue(){
+   if( this.tabData === 'all'){
+     console.log('thank god');
+// If `all` is true, select all cards regardless of their data attribute values
 //   //     // this.cards = ;
-//   this.cards =
-//   //   } else {
-//   //     // else if `all` is false, only select the cards with matching this.tabData values
-//   //     // this.cards = ;
-//   this.cards = 
-//   //   }
-    
+  //  this.cards = tabElement.toArray;
+ } 
+else {
+
+  console.log('I hate everything');
+//     // else if `all` is false, only select the cards with matching this.tabData values
+//        this.cards = this.tabData;
+// //   this.cards = 
+  // }
+
+}
 
 //   //    // Map over the newly converted NodeList we just created in our if statement above. Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class. 
 //   //   this.cards = Array.from(this.cards).map();
@@ -32,7 +38,7 @@
 //   //   // Add a click event that invokes this.selectTab
 //   //   this.tabElement.addEventListener();
 }
-
+ }
 //   selectTab(){
 
 //     // Select all elements with the .tab class on them
