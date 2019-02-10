@@ -28,18 +28,18 @@
   });
   console.log(this.cards);
   this.cards = new TabCard(this.cards);
- // console.log(this.card);
-//this.card = 
+  
+ 
 
    // Add a click event that invokes this.selectTab
  this.tabElement.addEventListener('click', this.selectTab.bind(this))
+ 
  }
 
   selectTab(){
-
 //Select all elements with the .tab class on them
   const tabs = document.querySelectorAll('.tab');
-    
+    console.log(tabs);
    // Iterate through the NodeList removing the .active-tab class from each element
  tabs.forEach((tab)=>{
    tab.classList.remove('active-tab');
@@ -70,7 +70,6 @@ class TabCard {
     // Update the style of this.cardElement to display = "flex"
      this.cardElement.style.display='flex';
   }
-
 }
 
 /* START HERE: 
