@@ -26,14 +26,14 @@
   this.cards = Array.from(this.cards).map(function(card){
     return card
   });
-  
+  //**the problem is here**
   this.cards = new TabCard(this.cards);
   console.log(this.cards);
  
 
    // Add a click event that invokes this.selectTab
  this.tabElement.addEventListener('click', this.selectTab.bind(this))
-// this.tabElement.addEventListener('click', () => {this.selectTab()})
+//this.tabElement.addEventListener('click', () => {this.selectTab()})
  
  }
 
@@ -81,6 +81,8 @@ class TabCard {
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each tab as a parameter
 
 */
+
+//was told to write it this way by a PM because of an error message that was there for seemingly no reason
 const tabs = document.querySelectorAll('.tab');
 tabs.forEach((tab) =>{
 new TabLink(tab)
